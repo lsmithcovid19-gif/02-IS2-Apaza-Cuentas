@@ -91,19 +91,23 @@ form.addEventListener("submit", (event) => {
   const loanDate = loanDateInput.value;
   const returnDate = returnDateInput.value;
 
-  if (!equipment || !borrower || !loanDate || !returnDate) {
-    showMessage("Complete todos los campos para registrar el préstamo.");
-    return;
-  }
-  if (returnDate < loanDate) {
-    showMessage("La fecha de devolución no puede ser anterior a la fecha de préstamo.");
-    return;
-  }
-  if (activeEquipmentIds(loadLoans()).has(equipment.id)) {
-    showMessage("El equipo seleccionado no está disponible.");
+  if (borrower.length > 50) {
+    showMessage("⚠ El nombre del solicitante no puede superar 50 caracteres.");
     return;
   }
 
+  if (!equipment || !borrower || !loanDate || !returnDate) {
+    showMessage("⚠ Complete todos los campos para registrar el préstamo.");
+    return;
+  }
+  if (returnDate < loanDate) {
+    showMessage("⚠ La fecha de devolución no puede ser anterior a la fecha de préstamo.");
+    return;
+  }
+  if (activeEquipmentIds(loadLoans()).has(equipment.id)) {
+    showMessage("⚠ El equipo seleccionado no está disponible.");
+    return;
+  }
   const loans = loadLoans();
   loans.unshift({
     id: crypto.randomUUID(),
