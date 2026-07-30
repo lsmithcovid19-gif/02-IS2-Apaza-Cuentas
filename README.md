@@ -1,6 +1,13 @@
-# Préstamos de equipos  Aplicación para Ingeniería de Software II
+# Préstamos de equipos - Ingeniería de Software II
 
 Miniaplicación estática para la actividad individual de aseguramiento de calidad de software. No usa base de datos ni servidor, guarda los registros en el navegador mediante `localStorage`.
+
+**Estudiante:** Lenin Smith Apaza Cuentas
+**Ficha asignada:** 02 - Longitud máxima del solicitante
+**Repositorio:** [02-IS2-Apaza-Cuentas](https://github.com/lsmithcovid19-gif/02-IS2-Apaza-Cuentas)
+**Demo en vivo:** *(agregar aquí el link de GitHub Pages cuando esté activo)*
+
+---
 
 ## Funcionalidad inicial
 
@@ -9,31 +16,37 @@ Miniaplicación estática para la actividad individual de aseguramiento de calid
 - Muestra los préstamos y permite registrar la devolución.
 - Conserva los datos del navegador mientras no se restablezcan desde la aplicación.
 
+## Mejora implementada
+
+**Validación de longitud máxima del solicitante.** El campo "Solicitante" no acepta más de 50 caracteres: si el nombre ingresado supera ese límite, el sistema muestra un mensaje de error y no registra el préstamo.
+
+**Criterios de aceptación:**
+- Un nombre de hasta 50 caracteres se registra correctamente.
+- Un nombre de 51 caracteres o más se rechaza, mostrando un mensaje claro y sin guardar el registro.
+
 ## Inicio rápido
 
-1. Copie esta carpeta a su repositorio individual o use el repositorio base como plantilla.
-2. Abra `index.html` en el navegador para probarla localmente.
-3. Implemente únicamente la mejora asignada en su ficha.
-4. Registre dos casos de prueba en la sección final de este README.
-5. Publique la aplicación en GitHub Pages y proporcione los enlaces solicitados.
+1. Clone este repositorio.
+2. Abra `index.html` en el navegador para probarlo localmente.
+3. Complete el formulario y pruebe registrar un préstamo.
 
 ## Archivos principales
 
-- `index.html`: estructura y controles de la aplicación.
-- `style.css`: diseño visual.
-- `app.js`: catálogo, registros, validaciones y almacenamiento local.
+| Archivo | Contenido |
+|---|---|
+| `index.html` | Estructura y controles de la aplicación |
+| `style.css` | Diseño visual |
+| `app.js` | Catálogo, registros, validaciones y almacenamiento local |
 
 ## Casos de prueba de mi mejora
 
-Reemplace esta tabla por los dos casos de su asignación. Incluya una captura por caso en el repositorio o muestre ambas pruebas en el video.
-
 | Caso | Datos de entrada / acción | Resultado esperado | Resultado obtenido | Estado |
-|---|---|---|---|---|
-| CP-01: caso válido | [Completar] | [Completar] | [Completar] | Aprobado / Fallido |
-| CP-02: caso límite o inválido | [Completar] | [Completar] | [Completar] | Aprobado / Fallido |
+|:---|:---|:---|:---|:---:|
+| **CP-01**<br>*(válido)* | Equipo disponible cualquiera. Solicitante: **"Lenin Smith Apaza Cuentas"** (≤ 50 caracteres). Fechas de préstamo y devolución válidas. Clic en "Registrar préstamo". | El sistema acepta el nombre, guarda el préstamo y lo muestra en la tabla con estado **Activo**. | El préstamo se registró correctamente y apareció en la tabla con estado "Activo". | Aprobado |
+| **CP-02**<br>*(inválido / límite)* | Equipo disponible cualquiera. Solicitante: nombre de **51+ caracteres** (ej. "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"). Fechas válidas. Clic en "Registrar préstamo". | El sistema rechaza el registro, muestra el mensaje de error correspondiente y no agrega ninguna fila. | Apareció el mensaje "⚠ El nombre del solicitante no puede superar 50 caracteres." La tabla no agregó ninguna fila nueva. | Aprobado |
 
 ## Entrega
 
-- URL del repositorio individual.
-- URL pública de GitHub Pages.
-- README actualizado con los dos casos de prueba.
+- **Repositorio individual:** https://github.com/lsmithcovid19-gif/02-IS2-Apaza-Cuentas
+- **GitHub Pages:** *(agregar aquí una vez publicado)*
+- README actualizado con los dos casos de prueba
