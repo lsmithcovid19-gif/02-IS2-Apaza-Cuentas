@@ -5,7 +5,7 @@ Miniaplicación estática para la actividad individual de aseguramiento de calid
 **Estudiante:** Lenin Smith Apaza Cuentas
 **Ficha asignada:** 02 - Longitud máxima del solicitante
 **Repositorio:** [02-IS2-Apaza-Cuentas](https://github.com/lsmithcovid19-gif/02-IS2-Apaza-Cuentas)
-**Demo en vivo:** *(agregar aquí el link de GitHub Pages cuando esté activo)*
+**Demo en vivo:** https://lsmithcovid19-gif.github.io/02-IS2-Apaza-Cuentas/
 
 ---
 
@@ -48,5 +48,5 @@ Miniaplicación estática para la actividad individual de aseguramiento de calid
 ## Entrega
 
 - **Repositorio individual:** https://github.com/lsmithcovid19-gif/02-IS2-Apaza-Cuentas
-- **GitHub Pages:** *(agregar aquí una vez publicado)*
+- **GitHub Pages:** https://lsmithcovid19-gif.github.io/02-IS2-Apaza-Cuentas/
 - README actualizado con los dos casos de prueba
